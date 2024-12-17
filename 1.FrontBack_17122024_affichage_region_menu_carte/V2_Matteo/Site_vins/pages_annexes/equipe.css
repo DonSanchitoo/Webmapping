@@ -1,0 +1,136 @@
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('fond_accueil.jpeg'); /* Ajoute une transparence sur l'image */
+    background-size: cover; /* Ajuste l'image pour couvrir tout le fond */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed; /* Assure que l'image reste fixe lors du défilement */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espacements internes */
+    font-family: Arial, sans-serif;
+    color: #333333;
+}
+
+header {
+    background-color: #fffaf4; /* Couleur du bandeau */
+    display: flex;
+    justify-content: space-between; /* Espacement entre les éléments du bandeau */
+    align-items: center; /* Centre les éléments verticalement */
+    padding: 20px;
+    position: sticky; /* Rend le bandeau fixe lors du défilement */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px; /* Hauteur du logo */
+}
+
+.main-buttons {
+    display: flex;
+    gap: 0; /* Pas d'espacement entre les boutons principaux */
+    width: 60%; /* Ajuste la largeur automatiquement */
+    justify-content: center; /* Centre les boutons principaux */
+}
+
+.main-button {
+    flex: 1; /* Chaque bouton prend une part égale de la largeur */
+    max-width: none ;
+    min-width: 100px;
+    text-align: center; /* Centre le texte des boutons */
+    padding: 20px; /* Espacement autour du texte des boutons */
+    background-color: #fffaf4; /* Même couleur que le bandeau */
+    color: #bb2700; /* Rouge Bordeaux */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    font-size: 16px;
+    font-weight: bold;
+    border: none; /* Enlève les bordures */
+    border-left: 1px solid #bb2700; /* Séparation entre les boutons */
+    transition: background-color 0.3s, opacity 0.3s; /* Transition pour l'effet de survol */
+}
+
+.main-button:first-child {
+    border-left: none; /* Enlève la bordure gauche pour le premier bouton */
+}
+
+.main-button:hover {
+    background-color: #bb2700; /* Fond rouge Bordeaux au survol */
+    color: #fffaf4; /* Texte blanc au survol */
+    opacity: 0.8; /* Ajuste l'opacité au survol */
+}
+
+nav {
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+.menu-item {
+    background-color: #fffaf4; /* Même couleur que le bandeau */
+    color: #bb2700; /* Rouge Bordeaux */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Effet ombre */
+    transition: background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.menu-item:hover {
+    background-color: #bb2700; /* Fond rouge Bordeaux au survol */
+    color: #fffaf4; /* Texte blanc au survol */
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: black; /* Rouge bordeaux pour le titre */
+}
+
+
+.team-member {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre le contenu verticalement et horizontalement */
+    margin-bottom: 20px;
+    background-color: #fffaf4; /* Fond beige pour les sections */
+    padding: 10px;
+    border: 1px solid #bb2700; /* Bordure rouge bordeaux */
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.team-member-description {
+    max-width: 600px;
+    color: #333333;
+    display: flex;
+    flex-direction: column; /* Change la direction de l'axe principal */
+    justify-content: center; /* Centre le texte verticalement */
+    text-align: justify;
+}
+
+.team-member img {
+    margin-right: 20px;
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+.join-us {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    color: black; /* Rouge bordeaux pour la section "Nous rejoindre" */
+}
+
+a {
+    color: #bb2700; /* Lien en rouge bordeaux */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

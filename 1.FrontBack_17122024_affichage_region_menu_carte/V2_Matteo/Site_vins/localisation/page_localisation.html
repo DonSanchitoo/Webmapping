@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.2/proj4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4leaflet/1.0.1/proj4leaflet.js"></script>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Mise en page principale */
+        .container {
+            display: flex;
+            height: 100vh; /* Hauteur de l'écran */
+        }
+
+        /* Section gauche pour les boutons et contenu */
+        .left-section {
+            flex: 1; /* Prend 30% de l'espace */
+            background-color: #f5f5f5; /* Optionnel : couleur de fond */
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch; /* S'assure que les éléments s'étendent sur toute la largeur */
+            overflow-y: auto; /* Activer le défilement vertical uniquement pour la section gauche */
+        }
+
+        /* Boutons de navigation */
+        .navigation-buttons {
+            display: flex; /* Disposition horizontale des boutons */
+            width: 100%; /* Les boutons prennent toute la largeur */
+            margin-bottom: 20px;
+        }
+
+        .navigation-buttons button {
+            flex: 1; /* Les boutons prennent toute la largeur disponible */
+            padding: 15px; /* Taille des boutons */
+            font-size: 16px;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            border: solid black 2px;
+            margin-top: 15px;
+            border-radius: 5px;
+            margin-right: 10px; /* Espacement entre les boutons */
+        }
+
+        .navigation-buttons button:hover {
+            background-color: lightgrey; /* Couleur bleue foncée au survol */
+        }
+
+        .navigation-buttons button:last-child {
+            margin-right: 0; /* Supprime l'espacement du dernier bouton */
+        }
+
+        /* Menus déroulants */
+        .dropdown {
+            margin-bottom: 20px; /* Espacement entre les menus */
+        }
+
+        label {
+            margin-bottom: 65px; /* Ajoute un espace sous le label */
+            font-size: 16px;
+        }
+
+        select {
+            width: 100%; /* Les menus déroulants prennent toute la largeur disponible */
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Section droite pour la carte */
+        .right-section {
+            flex: 2; /* Prend 70% de l'espace */
+            overflow: hidden; /* Désactive le défilement pour la section de la carte */
+        }
+
+        /* Carte Leaflet */
+        #map {
+            height: 100%; /* Prend toute la hauteur disponible */
+            width: 100%; /* Prend toute la largeur de la section */
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="page_localisation.css">
+<header>
+    <a href="../Accueil/Page_accueil.html">
+        <img src="logoSite.png" alt="Logo du site" class="logo">
+    </a>
+    <div class="main-buttons">
+        <a href="page_localisation.php" class="main-button">Recherche viticole par géolocalisation</a>
+        <a href="../vins/page_vin.html" class="main-button">Découvrir et trouver son vin</a>
+    </div>
+    <nav>
+        <a href="../pages_annexes/equipe.html" class="menu-item">Équipes</a>
+        <a href="#" class="menu-item">Projet</a>
+        <a href="#" class="menu-item">À propos</a>
+    </nav>
+</header>
+<body>
+<div class="container">
+    <!-- Section gauche -->
+    <div class="left-section">
+        <h4>Recherche viticole par géolocalisation</h4>
+        <div class="navigation-buttons">
+            <button onclick="window.location.href='../Accueil/Page_accueil.html';">Accueil</button>
+            <button onclick="window.location.href='../vins/page_vin.html';">Liste des vins</button>
+        </div>
+        <!-- Menus déroulants -->
+        <div class="dropdown">
+            <label for="region"><strong>Région:</strong></label>
+            <br>
+            <select id="region">
+                <option value="">Loading...</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <label for="departement"><strong>Département:</strong></label>
+            <br>
+            <select id="departement">
+                <option value="">Loading...</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="commune"><strong>Commune:</strong></label>
+            <br>
+            <select id="commune">
+                <option value="">Loading...</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="appellation">Appellation :</label>
+            <br></br>
+            <select id="appellation">
+                <option value="">Choisissez une appellation</option>
+                <!-- Ajoutez des options ici -->
+                <option value="bordeaux">Bordeaux</option>
+                <option value="champagne">Champagne</option>
+            </select>
+        </div>
+    </div>
+    <!-- Section droite contenant la carte -->
+    <div class="right-section">
+        <div id="map"></div>
+    </div>
+    <script src="JS/menu_deroul.js"></script>
+    <script src="JS/map_leaflet.js"></script>
+    <script src="JS/get_geom.js"></script>
+
+    <script>
+        // Gestion des événements des menus déroulants
+        document.getElementById('region').addEventListener('change', function () {
+            loadRegion(this.value);
+        });
+    </script>
+</body>
+</html>

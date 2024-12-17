@@ -1,0 +1,179 @@
+body {
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les espacements internes */
+  font-family: Arial, sans-serif;
+  color: #333333;
+  overflow: auto; /* Empêche le défilement global de la page */
+}
+
+header {
+  background-color: #fffaf4; /* Couleur du bandeau */
+  display: flex;
+  justify-content: space-between; /* Espacement entre les éléments du bandeau */
+  align-items: center; /* Centre les éléments verticalement */
+  padding: 20px;
+  position: initial; /* Rend le bandeau fixe lors du défilement */
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 50px; /* Hauteur du logo */
+}
+
+.main-buttons {
+  display: flex;
+  gap: 0; /* Pas d'espacement entre les boutons principaux */
+  width: 60%; /* Ajuste la largeur automatiquement */
+  justify-content: center; /* Centre les boutons principaux */
+}
+
+.main-button {
+  flex: 1; /* Chaque bouton prend une part égale de la largeur */
+  max-width: none ;
+  min-width: 100px;
+  text-align: center; /* Centre le texte des boutons */
+  padding: 20px; /* Espacement autour du texte des boutons */
+  background-color: #fffaf4; /* Même couleur que le bandeau */
+  color: #bb2700; /* Rouge Bordeaux */
+  text-decoration: none; /* Enlève le soulignement des liens */
+  font-size: 16px;
+  font-weight: bold;
+  border: none; /* Enlève les bordures */
+  border-left: 1px solid #bb2700; /* Séparation entre les boutons */
+  transition: background-color 0.3s, opacity 0.3s; /* Transition pour l'effet de survol */
+}
+
+.main-button:first-child {
+  border-left: none; /* Enlève la bordure gauche pour le premier bouton */
+}
+
+.main-button:hover {
+  background-color: #bb2700; /* Fond rouge Bordeaux au survol */
+  color: #fffaf4; /* Texte blanc au survol */
+  opacity: 0.8; /* Ajuste l'opacité au survol */
+}
+
+nav {
+  display: flex;
+  gap: 20px; /* Espacement entre les liens */
+}
+
+.menu-item {
+  background-color: #fffaf4; /* Même couleur que le bandeau */
+  color: #bb2700; /* Rouge Bordeaux */
+  text-decoration: none; /* Enlève le soulignement des liens */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px; /* Espacement intérieur */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Effet ombre */
+  transition: background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.menu-item:hover {
+  background-color: #bb2700; /* Fond rouge Bordeaux au survol */
+  color: #fffaf4; /* Texte blanc au survol */
+}
+
+.left-section h4 {
+  text-align: center;
+}
+
+#map {
+  width: 100%; /* Adaptation de la largeur au conteneur parent */
+  height: 100%; /* Hauteur de la carte */
+}
+
+.text-node {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+}
+
+/* Board */
+.board-67396a3bf915 {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: #FFFFFF;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Rectangle */
+.rectangle-67396a3bf91b > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px, 1.4210854715202004e-14px);
+}
+.rectangle-67396a3bf91b {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1920px;
+  height: 129px;
+  border-radius: 0px;
+}
+
+/* Rectangle */
+.rectangle-673efc0614ca > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px, 0px);
+}
+.rectangle-673efc0614ca {
+  position: absolute;
+  left: 623px;
+  top: 129px;
+  width: 1297px;
+  height: 952px;
+  border-radius: 0px;
+}
+
+/* Rectangle */
+.rectangle-67bf23f69211 {
+  position: absolute;
+  left: 0px;
+  top: 220px;
+  width: 623px;
+  height: 858px;
+  background: #023AE3;
+  border-radius: 0px;
+}
+
+/* Rectangle */
+.rectangle-67bf0f594a97 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px, 0px);
+}
+.rectangle-67bf0f594a97 {
+  position: absolute;
+  left: 0px;
+  top: 131px;
+  width: 310px;
+  height: 89px;
+  border-radius: 0px;
+}
+
+/* Rectangle */
+.rectangle-67bed67a61a5 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px, 0px);
+}
+.rectangle-67bed67a61a5 {
+  position: absolute;
+  left: 314px;
+  top: 131px;
+  width: 310px;
+  height: 89px;
+  border-radius: 0px;
+}
+
+
+

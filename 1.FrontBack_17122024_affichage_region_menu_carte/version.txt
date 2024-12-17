@@ -1,0 +1,6 @@
+version fonctionnelle : 17/12/2024
+Page d'accuielle avec carte Arcgis…
+localisation : Menu déroulant + affichage sur carte : régions
+Menu déroulant pour les départements sans affichages sur cartes
+Page projet fini
+

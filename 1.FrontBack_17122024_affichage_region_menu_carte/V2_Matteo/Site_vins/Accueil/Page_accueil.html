@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitez la France</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="page_accueil.css">
+    <!-- Lien vers le script d'ArcGIS -->
+    <script type="module" src="https://js.arcgis.com/embeddable-components/4.31/arcgis-embeddable-components.esm.js"></script>
+</head>
+<body>
+<header>
+    <img src="logoSite.png" alt="Logo du site" class="logo">
+    <div class="main-buttons">
+        <a href="../localisation/page_localisation.html" class="main-button">Recherche viticole par géolocalisation</a>
+        <a href="../vins/page_vin.html" class="main-button">Découvrir et trouver son vin</a>
+    </div>
+    <nav>
+        <a href="../pages_annexes/equipe.html" class="menu-item">Équipes</a>
+        <a href="#" class="menu-item">Projet</a>
+        <a href="#" class="menu-item">À propos</a>
+    </nav>
+</header>
+<h1 class="titre_accueil">Découvrez le vin français en cartes</h1>
+<div class="map-grid">
+    <div class="map-text-pair">
+        <arcgis-embedded-map style="height:400px;" item-id="9e671034dc864ae6b112017bf23e10ea" theme="light" portal-url="https://um3.maps.arcgis.com" heading-enabled legend-enabled></arcgis-embedded-map>
+        <div class="map-description">
+            <h2>L'appellation Bordeaux</h2>
+            <p>L'appellation viticole Bordeaux est l'une des plus prestigieuses et reconnues au monde.
+                Située dans le sud-ouest de la France, elle s'étend sur environ 115 000 hectares, regroupant des appellations célébres comme les <strong> Pessac-Léognan ou Saint-Emilion.</strong>
+                Cette région est célèbre pour ses vins rouges souvent issus de cépages comme <strong>le Merlot, le Cabernet Sauvignon et le Cabernet Franc.</strong>.
+                En plus des rouges, Bordeaux produit également des vins blancs secs et liquoreux remarquables, comme les <strong>célèbres Sauternes.</strong>
+            </p>
+        </div>
+    </div>
+    <div class="map-text-pair">
+        <div class="map-description">
+            <h2>L'appellation Languedoc-Roussillon</h2>
+            <p>L'appellation viticole Languedoc-Roussillon, située dans le sud de la France, est l'une des plus vastes régions viticoles du pays, avec environ 240 000 hectares de vignes.
+                Cette région est reconnue pour sa diversité de terroirs et de cépages comme <strong>grenache ou le syrah</strong>, produisant une gamme variée de vins
+                Parmi les appellations les plus célèbres de cette région, on retrouve <strong>Corbières, le Minervois, le Pic Saint-Loup et le Fitou.</strong>
+                Le Languedoc-Roussillon est également renommé pour ses vins doux comme <strong> le Muscat de Rivesaltes.</strong>
+                Grâce à son climat méditerranéen cette région viticole produit des vins appréciés pour leur qualité et leur authenticité.</p>
+        </div>
+        <arcgis-embedded-map style="height:400px;" item-id="6130c32b363e4bcd897bcfab60cb44a5" theme="light" portal-url="https://um3.maps.arcgis.com" heading-enabled legend-enabled></arcgis-embedded-map>
+    </div>
+    <div class="map-text-pair">
+        <arcgis-embedded-map style="height:400px;" item-id="a5b1b3468b924a56bafe2c0831efab9b" theme="light" portal-url="https://um3.maps.arcgis.com" heading-enabled legend-enabled></arcgis-embedded-map>
+        <div class="map-description">
+            <h2>L'appellation Bourgogne</h2>
+            <p>L'appellation viticole Bourgogne, située dans l'est de la France, est renommée pour produire certains des vins les plus prestigieux au monde.
+                S'étendant sur environ 28 000 hectares, cette région est célèbre pour ses vins rouges et blancs d'exception à base de <strong>Pinot noir ou de chardonnay.</strong>
+                Parmi les appellations les plus connues de Bourgogne, on trouve <strong>Gevrey-Chambertin, Pommard, Meursault et Chablis.</strong>
+                Ces noms évoquent des vins de qualité supérieure associés au climat de Bourgogne, avec ses étés chauds et ses hivers frais.
+            </p>
+        </div>
+    </div>
+    <div class="map-text-pair">
+        <div class="map-description">
+            <h2>L'appellation Vallée de la Loire</h2>
+            <p>L'appellation viticole de la Vallée de la Loire, située dans le centre-nord de la France, est l'une des régions viticoles les plus diverses du pays, s'étendant sur environ 70 000 hectares.
+                Cette région est renommée pour ses vins blancs, rouges, rosés et mousseux.
+                <strong>Chenin Blanc</strong> est l'un des cépages les plus emblématiques de la région, tout autant que <strong>le Sauvignon Blanc ou Le Cabernet Franc.</strong> l
+                Parmi les appellations les plus connues de la Vallée de la Loire, on retrouve <strong>Sancerre, Vouvray, Chinon, et Saumur.</strong>
+                Le climat tempéré de la région, influencé par la Loire et ses affluents, permet contribue à la complexité et à l'équilibre des vins.</p>
+        </div>
+        <arcgis-embedded-map style="height:400px;" item-id="53592c6aeeb443ca90b1c39c400dc205" theme="light" portal-url="https://um3.maps.arcgis.com" heading-enabled legend-enabled></arcgis-embedded-map>
+    </div>
+    <div class="map-text-pair">
+        <arcgis-embedded-map style="height:400px;" item-id="ed59e6c28b864f11bacca7cd453577e9" theme="light" portal-url="https://um3.maps.arcgis.com" heading-enabled legend-enabled></arcgis-embedded-map>
+        <div class="map-description">
+            <h2>L'appellation Provence</h2>
+            <p>L'appellation viticole Provence, située dans le sud-est de la France, est célèbre pour ses vins rosés élégants, qui représentent la majorité de sa production.
+                La région s'étend sur environ 27 000 hectares et bénéficie d'un climat méditerranéen idéal pour la viticulture.
+                Les principaux cépages utilisés sont <strong>le Grenache, la Syrah, le Mourvèdre, et le Cinsault</strong> apportant des rômes fruités et floraux.
+                Parmi les appellations les plus renommées, on trouve <strong>les Côtes de Provence ou les Coteaux d'Aix-en-Provence.</strong>
+                Les vins de Provence sont appréciés pour leur fraîcheur et leur finesse pour des repas estivales. </p>
+        </div>
+    </div>
+    <div class="map-text-pair">
+        <div class="map-description">
+            <h2>Les appellations Rhône, Jura et Beaujolais</h2>
+            <p> <u>La vallée du Rhône</u> , s'étendant sur environ 71 000 hectares.
+                Les vins y sont puissants et complexes, produits principalement à partir des cépages <strong>Syrah, Grenache, Mourvèdre et Viognier</strong> .
+                Des appellations renommées comme Côte-Rôtie ou Hermitage illustrent la richesse de cette région. </p>
+
+                <p><u>Le Jura</u> , situé dans l'est de la France, est une petite région viticole de 2 000 hectares célèbre pour ses vins uniques tels que le vin jaune et le vin de paille.
+                Les cépages principaux incluent <strong>le Savagnin et le Chardonnay.</strong>
+                    Les appellations Arbois, Château-Chalon et Côtes du Jura sont particulièrement notables. </p>
+
+                <p><u>Le Beaujolais</u> , au sud de la Bourgogne, s'étend sur environ 22 000 hectares et est connu pour ses vins rouges produits à partir du cépage <strong>Gamay.</strong>
+                    Les appellations <strong>Beaujolais, Beaujolais-Villages,</strong> ainsi que les dix crus du Beaujolais tels que <strong>Morgon, Fleurie et Moulin-à-Vent,</strong>  sont réputés pour leur fraîcheur et leur accessibilité.</p>
+        </div>
+        <arcgis-embedded-map style="height:400px;" item-id="6777f0342ef0459a8a1c45829007e7c0" theme="light" portal-url="https://um3.maps.arcgis.com" heading-enabled legend-enabled></arcgis-embedded-map>
+    </div>
+    <div class="map-text-pair">
+        <arcgis-embedded-map style="height:400px;" item-id="9c409cce2ed5462ca9f80a4790539c83" theme="light" portal-url="https://um3.maps.arcgis.com" heading-enabled legend-enabled></arcgis-embedded-map>
+        <div class="map-description">
+            <h2>L'appellation Alsace</h2>
+            <p>L'appellation viticole Alsace, située dans le nord-est de la France, est réputée pour ses vins blancs aromatiques.
+                S'étendant sur environ 15 000 hectares, la région bénéficie d'un climat semi-continental, avec des étés chauds et des hivers froids.
+                Les principaux cépages de l'Alsace incluent <strong>le Riesling, le Gewurztraminer, le Pinot Gris, et le Muscat,</strong> qui produisent des vins aromatique.
+                Parmi les appellations notables de la région, on retrouve <strong>l'Alsace Grand Cru, ou les Crémant d'Alsace.</strong>
+                Les vins d'Alsace sont souvent associés à la cuisine locale et se marient particulièrement bien avec des plats alsaciens traditionnels</p>
+        </div>
+    </div>
+    <div class="map-text-pair">
+        <div class="map-description">
+            <h2>L'appellation Corse</h2>
+            <p>L'appellation viticole de Corse, située sur l'île méditerranéenne de Corse, est réputée pour sa diversité de vins.
+                S'étendant sur environ 7 500 hectares, la région bénéficie d'un climat ensoleillé.
+                Les principaux cépages cultivés incluent <strong>le Nielluccio, un cépage rouge typique de la Corse, le Sciacarello et le Vermentino,</strong>  utilisé pour produire des vins blancs frais.
+                Parmi les appellations notables de la région, on trouve <strong>Patrimonio et Ajaccio,</strong> connue pour ses vins rouges légers
+                Les vins de Corse sont souvent appréciés pour leur caractère authentique et leur capacité à refléter le terroir de l'île.</p>
+        </div>
+        <arcgis-embedded-map style="height:400px;" item-id="0edb82e8e2cd440196431f1baa1b5224" theme="light" portal-url="https://um3.maps.arcgis.com" heading-enabled legend-enabled></arcgis-embedded-map>
+    </div>
+
+</div>
+<!-- Script pour gérer l'effet d'apparition et de disparition des textes -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const mapDescriptions = document.querySelectorAll('.map-description');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        });
+
+        mapDescriptions.forEach(description => {
+            observer.observe(description);
+        });
+    });
+</script>
+</body>
+<footer></footer>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
